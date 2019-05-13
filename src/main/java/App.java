@@ -1,11 +1,10 @@
 import java.util.Scanner;
-
 public class App {
     public static void main(String[] args) {
         Scanner ludut = new Scanner(System.in);
 
         System.out.println("HERE WE HIDE CODES :) WELCOME");
-        for (5, 6, 7) {
+        for (7,5) {
             System.out.println("place/m 5.Hide/k 6.Unhide/k 7.Exit");
             int place;
             Scanner sc = null;

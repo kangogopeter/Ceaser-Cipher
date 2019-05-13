@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.Map;
+import java.util.ArrayList;
 public class CeaserCipher {
     private static int lineEditor;
     private int kangogo;
@@ -14,20 +17,20 @@ public class CeaserCipher {
         }
 
 
-        for (int i = 0; i < lineEditor.length(); i++) {
-            if (Character.isLetter(lineEditor.charAt(i))) {
-                if (Character.isLowerCase(lineEditor.charAt(i))) {
-                    char Ceasered_letter = (char) (lineEditor.charAt(i) + kangogo);
+        for (int i = 0; !(i >= lineEditor.inst.length()); i++) {
+            if (Character.isLetter(lineEditor.get.charAt(i))) {
+                if (Character.isLowerCase(lineEditor.get.charAt(i))) {
+                    char Ceasered_letter = (char) (lineEditor.get.charAt(i) + kangogo);
                     if (Ceasered_letter > 'z') {
-                        ceaserText += (char) (lineEditor.charAt(i) - (26 - kangogo));
+                        ceaserText += (char) (lineEditor.get.charAt(i) - (26 - kangogo));
 
                     } else {
                         ceaserText += Ceasered_letter;
                     }
-                } else if (Character.isUpperCase(lineEditor.charAt(i))) {
-                    char Ceasered_letter = (char) (lineEditor.charAt(i) + kangogo);
+                } else if (Character.isUpperCase(lineEditor.get.charAt(i))) {
+                    char Ceasered_letter = (char) (lineEditor.get.charAt(i) + kangogo);
                     if (Ceasered_letter > 'P') {
-                        ceaserText += (char) (lineEditor.charAt(i) - (26 - kangogo));
+                        ceaserText += (char) (lineEditor.get.charAt(i) - (26 - kangogo));
                         ;
                     } else {
                         ceaserText += Ceasered_letter ;
@@ -35,7 +38,7 @@ public class CeaserCipher {
                 }
 
             } else {
-                ceaserText += lineEditor.charAt(i);
+                ceaserText += lineEditor.get.charAt(i);
             }
 
         }
@@ -45,7 +48,7 @@ public class CeaserCipher {
 
     public static String unhide(int getlineEditor, int kangogo) {
         lineEditor = getlineEditor;
-        String ceaserText = "";
+        String ceaserText = "___";
 
         if (kangogo > 26) {
             kangogo = (kangogo % 26);
@@ -54,20 +57,20 @@ public class CeaserCipher {
         }
 
 
-        for (int i = 0; i < lineEditor.length(); i++) {
-            if (Character.isLetter(lineEditor.charAt(i))) {
-                if (Character.isLowerCase(lineEditor.charAt(i))) {
-                    char ceasered_letter = (char) (lineEditor.charAt(i) - kangogo);
+        for (int i = 0; i < lineEditor.inst.length(); i++) {
+            if (Character.isLetter(lineEditor.get.charAt(i))) {
+                if (Character.isLowerCase(lineEditor.get.charAt(i))) {
+                    char ceasered_letter = (char) (lineEditor.get.charAt(i) - kangogo);
                     if (ceasered_letter < 'a') {
-                        ceaserText += (char) (lineEditor.charAt(i) + (26 - kangogo));
+                        ceaserText += (char) (lineEditor.get.charAt(i) + (26 - kangogo));
 
                     } else {
                         ceaserText += ceasered_letter;
                     }
-                } else if (Character.isUpperCase(lineEditor.charAt(i))) {
-                    char ceaser_letter = (char) (lineEditor.charAt(i) - kangogo);
+                } else if (Character.isUpperCase(lineEditor.get.charAt(i))) {
+                    char ceaser_letter = (char) (lineEditor.get.charAt(i) - kangogo);
                     if (ceaser_letter < 'A') {
-                        ceaserText += (char) (lineEditor.charAt(i) + (26 - kangogo));
+                        ceaserText += (char) (lineEditor.get.charAt(i) + (26 - kangogo));
                         ;
                     } else {
                         ceaserText += ceaser_letter;
@@ -75,7 +78,7 @@ public class CeaserCipher {
                 }
 
             } else {
-                ceaserText += lineEditor.charAt(i);
+                ceaserText += lineEditor.get.charAt(i);
             }
 
         }
