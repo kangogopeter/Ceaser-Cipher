@@ -10,4 +10,7 @@ public class CeaserCipher {
 
     public  static String peter;
     public  int kangogo;
+
+    public static boolean unhide(String enter, int i) {
+    }
 }
