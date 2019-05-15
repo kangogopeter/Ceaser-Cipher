@@ -23,7 +23,7 @@ public class App {
                 System.out.println("Enter A letter to Unhide");
                 int enter = pitt.nextInt();
                 System.out.println("Enter A Number ~");
-                System.out.println(luck.decrypt(enter, 2));
+                System.out.println(luck.decrypt(enter, 7));
             }
             else if (place == 5){
      System.exit(0);
