@@ -4,27 +4,26 @@ public class App {
         Scanner ludut = new Scanner(System.in);
 
         System.out.println("HERE WE HIDE CODES :) WELCOME");
-        for (5,7) {
+
             System.out.println("place/m 5.Encrypt/k 6.Decrypt/k 7.Exit");
             int place;
-            Scanner sc = null;
-            place = sc.nextInt();
+            Scanner pitt = null;
+            place = pitt.nextInt();
             CeaserCipher luck = new CeaserCipher();
             if (place == 5) {
                 System.out.println("Enter A Word:");
-                int enter = sc.nextInt();
+                int enter = pitt.nextInt();
                 int pett;
-                pett = sc.nextInt();
+                pett = pitt.nextInt();
                 System.out.println("INPUT A NUMBER");
-                System.out.println(CeaserCipher.encrypt(enter, pett));
+                System.out.println(luck.encrypt(enter, pett));
 
             }
             else if(place == 5) {
                 System.out.println("Enter A letter to Unhide");
-                int enter = sc.nextInt();
-                int pett = sc.nextInt();
+                int enter = pitt.nextInt();
                 System.out.println("Enter A Number ~");
-                System.out.println(CeaserCipher.decrypt(enter, 2));
+                System.out.println(luck.decrypt(enter, 2));
             }
             else if (place == 5){
      System.exit(0);
@@ -34,4 +33,4 @@ public class App {
             }
         }
     }
-}
+
