@@ -1,29 +1,19 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.*;
 
-public class CeaserCipherTest {
-    public CeaserCipherTest() {
+public class CeaserCipherTest{
 
+    @Test 
+    public void isEncrypt_ableTo_encrypt() {
+        CeaserCipher ceasercipher3 = new CeaserCipher();
+        assertEquals("retep", ceasercipher3.isEncrypt("kangogo",1));
     }
 
     @Test
-    public void CeaserCipher_testinginghidingmethod(){
-        CeaserCipherTest peter = new CeaserCipherTest();
-   assertEquals("retep", peter.hide("kangogo", 1));
+    public void runDecryptableTo_decrypt() {
+        CeaserCipher testCeaserCipher2 = new CeaserCipher();
+        assertEquals("kangogo", testCeaserCipher2.runDecrypt("retep", 1));
     }
-
-    public CeaserCipherTest(String kangogo, int i) {
-    }
-
-    @Test
-    public void CeaserCipher_testinghidingmethod(){
-        CeaserCipherTest peter = new CeaserCipherTest();
-        assertEquals("kangogo", peter.hide("retep",1));
-}
-
-    public String hide(String retep, int i) {
-        return retep;
-    }
-
 
 }

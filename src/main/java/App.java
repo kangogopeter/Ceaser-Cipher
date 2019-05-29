@@ -1,36 +1,34 @@
-import java.util.Scanner;
+import java.io.Console;
+
 public class App {
     public static void main(String[] args) {
-        Scanner ludut = new Scanner(System.in);
+        CeaserCipher ceaserCipher = new CeaserCipher();
+        Console myConsole = System.console();
+        System.out.println("input your name");
 
-        System.out.println("HERE WE HIDE CODES :) WELCOME");
+        String stringSentence = myConsole.readLine();
+        System.out.println("enter the pin");
+        String key = myConsole.readLine();
+        int userKey = Integer.parseInt(key);
 
-            System.out.println("place/m 5.Encrypt/k 6.Decrypt/k 7.Exit");
-            int place;
-            Scanner pitt = null;
-            place = pitt.nextInt();
-            CeaserCipher luck = new CeaserCipher();
-            if (place == 5) {
-                System.out.println("Enter A Word:");
-                int enter = pitt.nextInt();
-                int pett;
-                pett = pitt.nextInt();
-                System.out.println("INPUT A NUMBER");
-                System.out.println(luck.encrypt(enter, pett));
+        String encryptResult = CeaserCipher.isEncrypt(stringSentence, userKey); 
+        String decryptResult = CeaserCipher.runDecrypt(stringSentence,userKey);
+    
+        System.out.println("Choose 1 to Decrypt\nEnter 2 to Encrypt");
 
-            }
-            else if(place == 5) {
-                System.out.println("Enter A letter to Unhide");
-                int enter = pitt.nextInt();
-                System.out.println("Enter A Number ~");
-                System.out.println(luck.decrypt(enter, 7));
-            }
-            else if (place == 5){
-     System.exit(0);
-            }
-            else{
-            System.out.println("Not A Choice !");
-            }
+        String userCeaserCipher = myConsole.readLine();
+        String ceaserCiphers = userCeaserCipher.toUpperCase();
+
+        if (ceaserCiphers.equals("2")) {  
+
+            System.out.println(encryptResult);
+        }
+        else if(ceaserCiphers.equals("1")){ 
+            System.out.println(decryptResult);
+        }
+        else{
+            System.out.println("Not a valid choice");
         }
     }
 
+}
