@@ -6,7 +6,7 @@ An App Of Ceasercipher.
   
 ##CeaserCipher
 First Independent Project for Moringa core class.
-##By kangogopeter:
+##By kangogopeter:peterkangogo501@gmail.com
 ##Description
 The CeaserCipher is a fun app based on inputing your key for encrypting it
 
